@@ -22,7 +22,7 @@ async function getFirstSuccessfulBackup() {
   console.log('Querying backup flight servers...\n');
 
   try {
-    // Promise.any ignores rejections until at least ONE promise fulfills successfully
+    // Promise.any ignores all rejections until at least ONE promise fulfills successfully
     const successResult = await Promise.any([
       fetchBackupServer1(),
       fetchBackupServer2(),
