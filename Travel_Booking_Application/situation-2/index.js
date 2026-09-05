@@ -18,7 +18,7 @@ async function getFastestFlight() {
   console.log('Fetching flights from Server A and Server B...\n');
 
   try {
-    // Promise.race settles as soon as the FASTEST promise settles (fulfilled OR rejected)
+    // Promise.race settles as soon as the FASTEST promise settles that fulfilled or rejected
     const fastestResult = await Promise.race([
       fetchFlightServerA(),
       fetchFlightServerB()
