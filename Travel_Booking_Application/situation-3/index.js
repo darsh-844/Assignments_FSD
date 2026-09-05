@@ -25,7 +25,7 @@ function getInsurance() {
 async function getDashboardData() {
   console.log('Fetching all services...\n');
 
-  // Promise.allSettled ALWAYS resolves after ALL promises complete
+  // Promise.allSettled ALWAYS resolves after ALL promises are complete
   const results = await Promise.allSettled([
     getFlight(),
     getHotel(),
